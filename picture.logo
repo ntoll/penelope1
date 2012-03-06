@@ -1,0 +1,70 @@
+to branches
+    repeat 6 [
+        lt 90
+        triangle
+        rt 90
+        pu
+        fd 20
+        pd
+    ]
+end
+
+to forest
+    repeat 4 [
+        tree
+        rt 180
+        pu
+        fd 160
+        lt 90
+        fd 100
+        lt 90
+    ]
+end
+
+to house
+    pd
+    square
+    fd 100
+    rt 30
+    triangle
+end
+
+to picture
+    forest
+    house
+    ht
+end
+
+to square
+    repeat 4 [
+        fd 100
+        rt 90
+    ]
+end
+
+to stump
+    pd
+    repeat 4 [
+        fd 40
+        rt 90
+    ]
+    fd 40
+    rt 90
+    fd 40
+    pu
+    fd 30
+    lt 90
+    pd
+end
+
+to tree
+    stump
+    branches
+end
+
+to triangle
+    repeat 3 [
+        fd 100
+        rt 120
+    ]
+end
